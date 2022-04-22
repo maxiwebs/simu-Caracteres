@@ -1,0 +1,106 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BinarioASCII-Hexa</title>
+<link rel="stylesheet" type="text/css" media="screen" href="binarioCaracteres.css" />
+<script  type="text/javascript" src="binarioCaracteres.js"></script>
+</head>
+
+<table id="generar_cargar">
+  <tr>
+    <td>Bits por caracter: </td>
+    <td><input type="text" size= "4" maxlength="1" id="tamanio_palabra" value=2></td>
+    <td></td>
+    <td>
+      <input type="file" id="selectFiles" value="Import" />
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="text-align:left">
+      <div>
+        <input type="button" value="Generar" onclick="generar_instancia_vacia()">
+      </div>
+    </td>
+    <td></td>
+    <td>
+      <button id="import" onclick="cargar_desde_json()">Abrir archivo</button>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr><td></td></tr>
+</table>
+
+<table id="campo_entrada" class="oculto_inicial">
+  <tr>
+    <td>Entrada Teclado: </td>
+    <td valign = "top">
+      <div id="div_entrada"></div>
+    </td>
+    <td valign = "top">
+      <div id="boton_limpiar" >
+        <input type="button" value="Limpiar" onclick="limpiar_todo()">
+        <button onClick="window.location.reload();">Reiniciar</button>
+      </div>
+    </td>
+  </tr>
+  </table>
+
+  <table>
+    <tr><td></td></tr>
+  </table>
+
+  <table>
+    <tr>
+      <td valign="top">
+        <table id="tabla_generar_codificacion" class="oculto_inicial">
+          <tr>
+            <td><div id="tabla_campos_codificacion" >Codificación caracteres</div></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td valign = "top" align = "right">
+              <div id="boton_actualizar">
+                <input type="button" value="Actualizar" onclick="actualizar_codificacion()">
+              </div>
+            </td>
+            <td></td>
+          </tr>      
+        </table>
+      </td>
+      <td valign = "top">
+        <table id="tabla_salidas" class="oculto_inicial">
+          <tr>
+            <td valign = "top">
+              <div id="tabla_pantalla">Pantalla</div>
+            </td>
+            <td>Vista RAM
+              <div id="frame_mem">
+                <div id="contenido_mem">
+                  <div id="tabla_memoria">
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td valign = "top">
+            </td>    
+            <td><input type="button" value="Guardar texto" onclick="exportar_json()"></td>    
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  
+<!--Aclaraciones: 
+El tamaño de la memoria RAM es fijo, se muestra de esa forma por motivos didácticos.
+Los caracteres que no están definidos en la codificación, se completarán en la memoria con todos unos.
+-->
+
+</body>
+</html>
+

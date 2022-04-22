@@ -1,0 +1,23 @@
+.oculto_inicial {
+	visibility:hidden;
+}
+
+#frame_mem {
+	height: 220px;
+	width: 180px;
+	overflow: auto;
+	background: white;
+  }
+  
+#contenido_mem {
+	margin:20px;
+	height: 220px;
+	width: 140px;
+	background-color: white;
+}
+
+#result {
+	display:block;
+	width:400px;
+	height:200px;
+}
